@@ -19,6 +19,9 @@ def remove_strawberry(contacts)
     contact_details_hash.each do |attribute,data|
       if attribute == :favorite_ice_cream_flavors
         data.delete_if {|ice_cream| ice_cream == "strawberry"}
+        #this iterates through the data array, yields each element of the array to the block
+        #and tests to see if the yielded item is equal to strawberry
+        #if it is, then it deletes it
       end
 
     end
